@@ -2,10 +2,130 @@
   const b=document.querySelector('.menu-toggle'),n=document.querySelector('.main-nav');
   if(b&&n){b.onclick=()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)};n.querySelectorAll('a').forEach(a=>a.onclick=()=>n.classList.remove('open'))}
   document.querySelectorAll('[data-year]').forEach(x=>x.textContent=new Date().getFullYear());
-  const els=document.querySelectorAll('.reveal');
-  if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});els.forEach(e=>io.observe(e))}else els.forEach(e=>e.classList.add('in'));
+  // Scroll Reveal Observer: Animar elementos progresivamente al ingresar a cada sección
+  const selectors = [
+    'section .section-heading',
+    'section .container > div',
+    'section article',
+    'section .need-card',
+    'section .scope-grid > article',
+    'section .scene-card',
+    'section details',
+    'section .deliverable-list p',
+    'section .principle-list p',
+    'section .contact-pill',
+    'section .cta-content',
+    'section .about-grid > *',
+    'section .flagship-grid > *',
+    'section .decision-grid > *',
+    'section .ecosystem-grid > *',
+    'section .projects-layout > *'
+  ];
+
+  selectors.forEach(sel => {
+    document.querySelectorAll(sel).forEach((el) => {
+      if (el.classList.contains('project-card')) return;
+      if (!el.classList.contains('reveal')) {
+        el.classList.add('reveal');
+      }
+      if (el.parentElement && el.parentElement.children.length > 1) {
+        const index = Array.from(el.parentElement.children).indexOf(el);
+        if (index > 0 && index <= 5) {
+          el.style.transitionDelay = `${index * 0.1}s`;
+        }
+      }
+    });
+  });
+
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(e => io.observe(e));
+  } else {
+    els.forEach(e => e.classList.add('in'));
+  }
   const cards=[...document.querySelectorAll('.project-card')],dots=document.querySelector('.carousel-dots');let i=0;
   if(cards.length&&dots){cards.forEach((_,k)=>{const d=document.createElement('i');if(k===0)d.className='active';dots.appendChild(d)});const ds=[...dots.children],show=k=>{i=(k+cards.length)%cards.length;cards.forEach((c,j)=>c.classList.toggle('active',j===i));ds.forEach((d,j)=>d.classList.toggle('active',j===i))};document.querySelector('[data-prev]')?.addEventListener('click',()=>show(i-1));document.querySelector('[data-next]')?.addEventListener('click',()=>show(i+1));setInterval(()=>show(i+1),7000)}
+})();
+
+// Single-Page Block View Controller: Mostrar únicamente el bloque seleccionado en el menú
+(() => {
+  const blocks = document.querySelectorAll('.page-block');
+  const navLinks = document.querySelectorAll('.main-nav a, .footer-grid a');
+  if (!blocks.length) return;
+
+  const showBlock = (targetId) => {
+    let cleanId = targetId || 'inicio';
+    if (cleanId === 'inicio-block') cleanId = 'inicio';
+    if (cleanId === 'anatomia' || cleanId === 'decision') cleanId = 'arquitectura';
+
+    let scrollToSubSection = null;
+    if (cleanId === 'construccion' || cleanId === 'inversion') {
+      scrollToSubSection = cleanId;
+      cleanId = 'ayuda';
+    } else if (cleanId === 'ecosistema') {
+      scrollToSubSection = 'ecosistema';
+      cleanId = 'nosotros';
+    } else if (cleanId === 'proyectos' || cleanId === 'sectores') {
+      cleanId = 'experiencia';
+    }
+
+    const targetBlock = document.querySelector(`.page-block[data-block="${cleanId}"]`) || document.getElementById(cleanId) || document.querySelector('.page-block[data-block="inicio"]');
+    if (!targetBlock) return;
+
+    document.body.classList.add('block-mode-active');
+    blocks.forEach(b => b.classList.remove('is-active-block'));
+    targetBlock.classList.add('is-active-block');
+
+    // Activar animaciones dentro del bloque seleccionado
+    targetBlock.querySelectorAll('.reveal').forEach(r => r.classList.add('in'));
+
+    // Resaltar enlace activo en la navegación
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href') || '';
+      link.classList.toggle('is-active-nav', href.includes(`#${cleanId}`));
+    });
+
+    if (scrollToSubSection) {
+      const subEl = document.getElementById(scrollToSubSection);
+      if (subEl) {
+        setTimeout(() => {
+          subEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
+        return;
+      }
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Interceptar clics en los enlaces del menú
+  document.querySelectorAll('a[href^="#"], a[href^="index.html#"]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const parts = href.split('#');
+    const id = parts[1];
+    if (id && id !== 'contacto' && !link.classList.contains('nav-cta')) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        showBlock(id);
+        history.pushState(null, null, `#${id}`);
+      });
+    }
+  });
+
+  // Leer hash de la URL al cargar o mostrar inicio por defecto
+  const hash = window.location.hash.replace('#', '');
+  if (hash !== 'contacto') {
+    setTimeout(() => showBlock(hash || 'inicio'), 50);
+  }
 })();
 
 // Interactive intellectual assets: Gerencia Integral, Architecture of Decisions and Ecosystem
@@ -131,4 +251,59 @@
 
   handleForm('strategic-session-form', 'form-name', 'form-whatsapp', 'form-message', 'form-feedback');
   handleForm('modal-strategic-form', 'modal-form-name', 'modal-form-whatsapp', 'modal-form-message', 'modal-form-feedback');
+})();
+
+// Visor Modal Emergente para PDF
+(() => {
+  const pdfModal = document.getElementById('modal-pdf');
+  const pdfCloseBtn = document.getElementById('modal-pdf-close');
+  if (!pdfModal) return;
+
+  const openPdfModal = (e) => {
+    if (e) {
+      e.preventDefault();
+      const btn = e.currentTarget;
+      
+      const newUrl = btn.getAttribute('data-pdf-url') || btn.getAttribute('href');
+      const newTitle = btn.getAttribute('data-pdf-title');
+      
+      if (newUrl && newUrl.endsWith('.pdf')) {
+        const frame = document.getElementById('pdf-frame');
+        const dlBtn = document.getElementById('modal-pdf-download');
+        if (frame) frame.src = newUrl;
+        if (dlBtn) dlBtn.href = newUrl;
+      }
+      
+      if (newTitle) {
+        const titleEl = document.getElementById('modal-pdf-title');
+        if (titleEl) titleEl.textContent = newTitle;
+      }
+    }
+    pdfModal.classList.add('is-open');
+    pdfModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closePdfModal = () => {
+    pdfModal.classList.remove('is-open');
+    pdfModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  // Interceptar botones Conoce más / PDF
+  document.querySelectorAll('.dice-pdf-btn, a[href$=".pdf"]').forEach(btn => {
+    btn.addEventListener('click', openPdfModal);
+  });
+
+  if (pdfCloseBtn) pdfCloseBtn.addEventListener('click', closePdfModal);
+
+  pdfModal.addEventListener('click', (e) => {
+    if (e.target === pdfModal) closePdfModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && pdfModal.classList.contains('is-open')) {
+      closePdfModal();
+    }
+  });
 })();
