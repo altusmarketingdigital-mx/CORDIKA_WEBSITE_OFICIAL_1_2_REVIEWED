@@ -62,3 +62,73 @@
     'CKS®':{title:'CKS®',text:'Capturamos experiencia, procesos y lecciones para que cada proyecto mejore al siguiente.'}
   });
 })();
+
+// Strategic session form & Modal Controller
+(() => {
+  const modal = document.getElementById('modal-session');
+  const closeBtn = document.getElementById('modal-close-btn');
+
+  const openModal = (e) => {
+    if (e) e.preventDefault();
+    if (modal) {
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const closeModal = () => {
+    if (modal) {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  };
+
+  // Open modal on nav-cta or Sesión estratégica buttons
+  document.querySelectorAll('.nav-cta, a[href="#contacto"], a[href="index.html#contacto"]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      openModal(e);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  // Handle form submission helper
+  const handleForm = (formId, nameId, waId, msgId, feedbackId) => {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    const feedback = document.getElementById(feedbackId);
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById(nameId)?.value.trim();
+      const whatsapp = document.getElementById(waId)?.value.trim();
+      const message = document.getElementById(msgId)?.value.trim();
+
+      if (!name || !whatsapp || !message) return;
+
+      if (feedback) {
+        feedback.textContent = `¡Gracias, ${name}! Te estamos redirigiendo a WhatsApp...`;
+        feedback.classList.add('is-visible');
+      }
+
+      const text = `Hola CORDIKA, solicito una Sesión Estratégica.\n\n*Nombre:* ${name}\n*WhatsApp:* ${whatsapp}\n*Proyecto/Mensaje:* ${message}`;
+      const waUrl = `https://wa.me/523291228034?text=${encodeURIComponent(text)}`;
+
+      setTimeout(() => {
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+        form.reset();
+        closeModal();
+      }, 800);
+    });
+  };
+
+  handleForm('strategic-session-form', 'form-name', 'form-whatsapp', 'form-message', 'form-feedback');
+  handleForm('modal-strategic-form', 'modal-form-name', 'modal-form-whatsapp', 'modal-form-message', 'modal-form-feedback');
+})();
