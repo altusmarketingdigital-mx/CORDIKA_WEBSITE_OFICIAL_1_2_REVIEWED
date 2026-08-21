@@ -63,11 +63,13 @@
 
   const showBlock = (targetId) => {
     let cleanId = targetId || 'inicio';
+    
     if (cleanId === 'inicio-block') cleanId = 'inicio';
     if (cleanId === 'anatomia' || cleanId === 'decision') cleanId = 'arquitectura';
 
     let scrollToSubSection = null;
-    if (cleanId === 'construccion' || cleanId === 'inversion') {
+    
+    if (cleanId === 'construccion') {
       scrollToSubSection = cleanId;
       cleanId = 'ayuda';
     } else if (cleanId === 'ecosistema') {
@@ -90,7 +92,7 @@
     // Resaltar enlace activo en la navegación
     navLinks.forEach(link => {
       const href = link.getAttribute('href') || '';
-      link.classList.toggle('is-active-nav', href.includes(`#${cleanId}`));
+      link.classList.toggle('is-active-nav', href === `#${targetId}` || (cleanId === targetId && href === `#${cleanId}`));
     });
 
     if (scrollToSubSection) {
@@ -112,7 +114,7 @@
     if (!href) return;
     const parts = href.split('#');
     const id = parts[1];
-    if (id && id !== 'contacto' && !link.classList.contains('nav-cta')) {
+    if (id && !link.classList.contains('nav-cta')) {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         showBlock(id);
@@ -123,7 +125,7 @@
 
   // Leer hash de la URL al cargar o mostrar inicio por defecto
   const hash = window.location.hash.replace('#', '');
-  if (hash !== 'contacto') {
+  if (hash) {
     setTimeout(() => showBlock(hash || 'inicio'), 50);
   }
 })();
@@ -206,7 +208,7 @@
   };
 
   // Open modal on nav-cta or Sesión estratégica buttons
-  document.querySelectorAll('.nav-cta, a[href="#contacto"], a[href="index.html#contacto"]').forEach(btn => {
+  document.querySelectorAll('.nav-cta').forEach(btn => {
     btn.addEventListener('click', (e) => {
       openModal(e);
     });

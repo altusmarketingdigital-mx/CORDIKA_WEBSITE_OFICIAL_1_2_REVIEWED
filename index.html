@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=56.0">
 </head>
 <body>
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -24,7 +24,42 @@
     <a class="brand" href="#inicio" aria-label="CORDIKA Real Estate"><img src="assets/images/logo-cordika.png" alt="CORDIKA Real Estate"></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menú</button>
     <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
-      <a href="#inicio">Inicio</a><a href="#nosotros">Quiénes decidimos ser</a><a href="#ayuda">Cómo te ayudamos</a><a href="#gerencia">Gerencia integral</a><a href="#metodo">Método</a><a href="#arquitectura">Anatomía de una decisión</a><a href="#experiencia">Experiencia</a><a href="#cks">CKS®</a><a href="#contacto">Contacto</a>
+      <a href="#inicio">Inicio</a>
+      <div class="dropdown">
+        <a href="#nosotros" class="dropbtn">Quiénes decidimos ser ▾</a>
+        <div class="dropdown-content">
+          <a href="#quienes-somos">Quiénes somos</a>
+          <a href="#que-hacemos">Qué hacemos</a>
+          <a href="#como-ayudamos">Cómo podemos ayudarte</a>
+          <a href="#metologia">METOLOGÍA</a>
+          <a href="assets/docs/ADN.pdf" target="_blank">Brochure</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#equipamiento" class="dropbtn">Equipamiento ▾</a>
+        <div class="dropdown-content">
+          <a href="#equipamiento-restaurantes">Equipamiento para restaurantes y cocinas industriales</a>
+          <a href="assets/docs/ADN.pdf" target="_blank">CTA Brochure</a>
+        </div>
+      </div><div class="dropdown">
+        <a href="#cursos" class="dropbtn">Cursos ▾</a>
+        <div class="dropdown-content">
+          <a href="#curso-supervision">Supervisión a nivel internacional</a>
+          <a href="#curso-seguridad">Seguridad y salud en el trabajo</a>
+          <a href="#curso-calidad">Plan de Calidad</a>
+          <a href="#curso-auditorias">Auditorias de Proyecto</a>
+          <a href="#curso-lean">Lean Construction</a>
+          <a href="assets/docs/ADN.pdf" target="_blank">CTA Brochure</a>
+        </div>
+      </div><div class="dropdown">
+        <a href="#inversion" class="dropbtn">Inversión ▾</a>
+        <div class="dropdown-content">
+          <a href="#inv-copropiedad">Copropiedad</a>
+          <a href="#inv-flipping">Flipping</a>
+          <a href="#inv-renta">Renta Híbrida</a>
+          <a href="#inv-liquidez">Liquidez Digital</a>
+        </div>
+      </div><a href="#contacto">Contacto</a>
     </nav>
     <a class="nav-cta" href="#contacto">Sesión estratégica</a>
   </div></div>
@@ -33,29 +68,222 @@
 <main id="contenido">
   <!-- Bloque 0: Inicio -->
   <div class="page-block" data-block="inicio" id="inicio-block">
-    <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/images/hero.jpg" alt="Arquitectura corporativa contemporánea al atardecer">
-      <div class="hero-shade"></div>
-      <div class="container hero-content reveal">
-        <p class="eyebrow">Strategic Project Management · Real Estate · Construction Intelligence</p>
-        <h1 id="hero-title">Dirigimos proyectos.<br><span>Construimos confianza.</span></h1>
-        <p class="hero-lead">Acompañamos decisiones críticas desde la idea hasta la entrega, protegiendo tiempo, inversión, calidad y reputación.</p>
-        <div class="hero-actions"><a class="btn btn-gold" href="#gerencia">Conoce Gerencia Integral <span>→</span></a><a class="btn btn-outline" href="#contacto">Hablemos de tu proyecto</a></div>
+    <!-- DIAGRAMA CICLO DEL VALOR -->
+    <section class="section cycle-diagram-section">
+      <div class="container reveal">
+        <div class="cycle-title-wrap">
+          <p class="section-label gold">UN SOLO ALIADO: TODO EL CICLO DEL VALOR.</p>
+          <h2 class="cycle-main-title">Ecosistema CORDIKA</h2>
+        </div>
+
+        <div class="cycle-radial-wrapper">
+          
+          <!-- LÍNEAS DE CONEXIÓN SVG (Fondo) -->
+          <svg class="cycle-lines" viewBox="0 0 1000 1000">
+            <defs>
+              <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <polygon points="0 0, 6 3, 0 6" fill="var(--gold2, #d4af37)" />
+              </marker>
+              <marker id="arrowhead-reverse" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <polygon points="6 0, 0 3, 6 6" fill="var(--gold2, #d4af37)" />
+              </marker>
+            </defs>
+            
+            <!-- Conexiones al centro (Bidireccionales) -->
+            <!-- 1 --> <line x1="500" y1="210" x2="500" y2="350" stroke="var(--gold2)" stroke-width="1.5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-reverse)" />
+            <!-- 2 --> <line x1="740" y1="310" x2="620" y2="400" stroke="var(--gold2)" stroke-width="1.5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-reverse)" />
+            <!-- 3 --> <line x1="810" y1="580" x2="650" y2="550" stroke="var(--gold2)" stroke-width="1.5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-reverse)" />
+            <!-- 4 --> <line x1="630" y1="780" x2="560" y2="640" stroke="var(--gold2)" stroke-width="1.5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-reverse)" />
+            <!-- 5 --> <line x1="370" y1="780" x2="440" y2="640" stroke="var(--gold2)" stroke-width="1.5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-reverse)" />
+            <!-- 6 --> <line x1="190" y1="580" x2="350" y2="550" stroke="var(--gold2)" stroke-width="1.5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-reverse)" />
+            <!-- 7 --> <line x1="260" y1="310" x2="380" y2="400" stroke="var(--gold2)" stroke-width="1.5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-reverse)" />
+
+            <!-- Conexiones circulares entre nodos -->
+            <!-- 1 to 2 --> <path d="M 580 150 Q 680 180 730 230" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrowhead)" />
+            <!-- 2 to 3 --> <path d="M 810 350 Q 840 460 810 520" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrowhead)" />
+            <!-- 3 to 4 --> <path d="M 760 670 Q 700 730 650 750" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrowhead)" />
+            <!-- 4 to 5 --> <path d="M 530 810 Q 500 820 470 810" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrowhead)" />
+            <!-- 5 to 6 --> <path d="M 350 750 Q 280 720 240 670" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrowhead)" />
+            <!-- 6 to 7 --> <path d="M 190 510 Q 160 410 200 340" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrowhead)" />
+            <!-- 7 to 1 --> <path d="M 280 230 Q 350 160 420 150" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrowhead)" />
+
+          </svg>
+
+          <!-- NODO CENTRAL -->
+          <div class="cycle-center">
+            <div class="cycle-center-inner">
+              <img src="assets/images/logo-cordika.png" alt="CORDIKA" style="width: 140px; margin-bottom: 10px;">
+              <p>CONSTRUYENDO VALOR<br>GENERANDO FUTURO</p>
+            </div>
+            <!-- Textos curvos flotantes simulados -->
+            <div class="cycle-center-ring">
+              <span class="ring-text rt-top">ESTRATEGIA</span>
+              <span class="ring-text rt-right">VALOR</span>
+              <span class="ring-text rt-left">PLANEACIÓN</span>
+            </div>
+          </div>
+
+          <!-- NODOS SATELITALES -->
+          
+          <!-- Nodo 1 -->
+          <div class="cycle-node" style="top: 15%; left: 50%;">
+            <div class="cycle-node-circle">
+              <span class="cycle-badge">1</span>
+              <div class="cycle-icon">👥</div>
+              <h4>GERENCIA DE<br>PROYECTOS Y<br>GESTIÓN DE OBRA</h4>
+            </div>
+            
+          </div>
+
+          <!-- Nodo 2 -->
+          <div class="cycle-node" style="top: 28%; left: 77%;">
+            <div class="cycle-node-circle">
+              <span class="cycle-badge">2</span>
+              <div class="cycle-icon">🏗️</div>
+              <h4>CONSTRUCCIÓN<br>DE PROYECTOS</h4>
+            </div>
+            
+            
+          </div>
+
+          <!-- Nodo 3 -->
+          <div class="cycle-node" style="top: 58%; left: 84%;">
+            <div class="cycle-node-circle">
+              <span class="cycle-badge">3</span>
+              <div class="cycle-icon">🏢</div>
+              <h4>ADMINISTRACIÓN<br>DE PROYECTOS<br>E INMUEBLES</h4>
+            </div>
+            
+            
+          </div>
+
+          <!-- Nodo 4 -->
+          <div class="cycle-node" style="top: 81%; left: 65%;">
+            <div class="cycle-node-circle">
+              <span class="cycle-badge">4</span>
+              <div class="cycle-icon">⚙️</div>
+              <h4>MANTENIMIENTO Y<br>FACILITY<br>MANAGEMENT</h4>
+            </div>
+            
+            
+          </div>
+
+          <!-- Nodo 5 -->
+          <div class="cycle-node" style="top: 81%; left: 35%;">
+            <div class="cycle-node-circle">
+              <span class="cycle-badge">5</span>
+              <div class="cycle-icon">🎓</div>
+              <h4>CORDIKA<br>ACADEMY<br>CAPACITACIÓN</h4>
+            </div>
+            
+            
+          </div>
+
+          <!-- Nodo 6 -->
+          <div class="cycle-node" style="top: 58%; left: 16%;">
+            <div class="cycle-node-circle">
+              <span class="cycle-badge">6</span>
+              <div class="cycle-icon">💰</div>
+              <h4>CORDIKA FRACTIONAL<br>SMART PORTFOLIO<br><span style="color:var(--gold2);">INVERSIÓN</span></h4>
+            </div>
+            
+            
+          </div>
+
+          <!-- Nodo 7 -->
+          <div class="cycle-node" style="top: 28%; left: 23%;">
+            <div class="cycle-node-circle">
+              <span class="cycle-badge">7</span>
+              <div class="cycle-icon">🪑</div>
+              <h4>EQUIPAMIENTO Y<br>MOBILIARIO<br>RESTAURANTERO</h4>
+            </div>
+            
+            
+            
+          </div>
+
+        </div>
       </div>
-      <div class="hero-stats"><div class="container stats-grid">
-        <article><strong>20+</strong><span>Años de experiencia profesional</span></article>
-        <article><strong>6</strong><span>Parques industriales en el Bajío</span></article>
-        <article><strong>2,500+</strong><span>Viviendas y departamentos</span></article>
-        <article><strong>7%</strong><span>Ahorro con ingeniería de valor</span></article>
-      </div></div>
+    
+<!-- VERSIÓN MÓVIL DEL ECOSISTEMA (Tarjetas Verticales) -->
+        <div class="cycle-mobile-wrapper">
+          
+          <div class="cycle-mobile-card">
+            <div class="cm-header">
+              <span class="cm-badge">1</span>
+              <div class="cm-icon">👥</div>
+              <h4>GERENCIA DE PROYECTOS Y GESTIÓN DE OBRA</h4>
+            </div>
+            
+            
+          </div>
+
+          <div class="cycle-mobile-card">
+            <div class="cm-header">
+              <span class="cm-badge">2</span>
+              <div class="cm-icon">🏗️</div>
+              <h4>CONSTRUCCIÓN DE PROYECTOS</h4>
+            </div>
+            
+            
+          </div>
+
+          <div class="cycle-mobile-card">
+            <div class="cm-header">
+              <span class="cm-badge">3</span>
+              <div class="cm-icon">🏢</div>
+              <h4>ADMINISTRACIÓN DE PROYECTOS E INMUEBLES</h4>
+            </div>
+            
+            
+          </div>
+
+          <div class="cycle-mobile-card">
+            <div class="cm-header">
+              <span class="cm-badge">4</span>
+              <div class="cm-icon">⚙️</div>
+              <h4>MANTENIMIENTO Y FACILITY MANAGEMENT</h4>
+            </div>
+            
+            
+          </div>
+
+          <div class="cycle-mobile-card">
+            <div class="cm-header">
+              <span class="cm-badge">5</span>
+              <div class="cm-icon">🎓</div>
+              <h4>CORDIKA ACADEMY CAPACITACIÓN</h4>
+            </div>
+            
+            
+          </div>
+
+          <div class="cycle-mobile-card">
+            <div class="cm-header">
+              <span class="cm-badge">6</span>
+              <div class="cm-icon">💰</div>
+              <h4>CORDIKA FRACTIONAL SMART PORTFOLIO INVERSIÓN</h4>
+            </div>
+            
+            
+          </div>
+
+          <div class="cycle-mobile-card">
+            <div class="cm-header">
+              <span class="cm-badge">7</span>
+              <div class="cm-icon">🪑</div>
+              <h4>EQUIPAMIENTO Y MOBILIARIO RESTAURANTERO</h4>
+            </div>
+            
+            
+          </div>
+
+        </div>
+
+    
     </section>
 
-    <section class="editorial-intro"><div class="container intro-grid reveal"><p class="intro-kicker">Antes del concreto</p><h2>Existe una decisión.</h2><p>CORDIKA nace para convertir experiencia, información y criterio en una ruta clara de ejecución. No llegamos únicamente a administrar obra. Llegamos para dirigir el resultado.</p></div></section>
-
-    <section class="section sectors"><div class="container"><div class="section-heading reveal"><p class="section-label">Sectores</p><h2>Experiencia para proyectos <span>de distinta naturaleza.</span></h2></div><div class="sector-grid"><article>Industrial</article><article>Comercial</article><article>Residencial</article><article>Hotelería</article><article>Infraestructura</article><article>Salud y proyectos especiales</article></div></div></section>
-  </div>
-
-  <!-- Bloque 1: Quiénes decidimos ser (Rediseño Ejecutivo) -->
+<!-- Bloque 1: Quiénes decidimos ser (Rediseño Ejecutivo) -->
   <div class="page-block" data-block="nosotros" id="nosotros">
     <section class="section about-executive">
       <div class="container">
@@ -133,198 +361,728 @@
       </div>
     </section>
 
-    <!-- El Ecosistema CORDIKA® dentro de Quiénes decidimos ser -->
-    <section class="section ecosystem ecosystem-integrated" id="ecosistema">
-      <div class="container intellectual-head reveal">
-        <p class="section-label">El Ecosistema CORDIKA®</p>
-        <h2>Todo está conectado.</h2>
-        <p>Integramos real estate, proyectos, inversión y activos operativos para crear soluciones completas y generar valor sostenible.</p>
-      </div>
-      <div class="container intellectual-canvas reveal">
-        <div class="ecosystem-wheel">
-          <div class="ecosystem-core"><img src="assets/images/logo-cordika.png" alt="CORDIKA Real Estate"><span>Una visión integral</span></div>
-          <article class="ecosystem-node e1"><b>Real Estate</b><span>Propiedades residenciales, comerciales, industriales e inversión.</span></article>
-          <article class="ecosystem-node e2"><b>Inversión</b><span>Análisis, estructuración y acompañamiento estratégico.</span></article>
-          <article class="ecosystem-node e3"><b>Plataforma</b><span>Conecta oferta, demanda, aliados y oportunidades.</span></article>
-          <article class="ecosystem-node e4"><b>Equipamiento</b><span>Equipos, maquinaria y mobiliario para operar.</span></article>
-          <span class="ecosystem-orbit"></span>
+  </div>
+
+
+  <!-- Bloque: Quiénes somos -->
+  <div class="page-block" data-block="quienes-somos" id="quienes-somos">
+    <section class="section about-intro">
+      <div class="container reveal">
+        <div class="about-hero-split">
+          <div class="about-hero-left">
+            <h2 class="about-title-sans">Quiénes somos</h2>
+            <div class="about-text-wrapper">
+              <p>
+                En Cordika integramos estrategia, dirección de proyectos, bienes raíces, equipamiento e inversión para ofrecer soluciones completas. Somos tu aliado estratégico alineando objetivos, optimizando recursos y garantizando resultados medibles en cada etapa de tu proyecto.
+              </p>
+            </div>
+          </div>
+          <div class="about-hero-right reveal">
+            <img src="assets/images/about.jpg" alt="Equipo Cordika">
+          </div>
         </div>
-        <div class="intellectual-footer light-footer"><p>Un ecosistema. Un equipo. Un estándar de excelencia.</p><a class="btn btn-gold nav-cta" href="#contacto">Construir una solución integral →</a></div>
+
+        <div class="values-banner">
+          <div class="value-item">
+            <div class="value-icon">👥</div>
+            <div>
+              <strong>EQUIPO EXPERTO</strong>
+              <span>Multidisciplinario y comprometido.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🤝</div>
+            <div>
+              <strong>COMPROMISO TOTAL</strong>
+              <span>Con tus objetivos y resultados.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🎯</div>
+            <div>
+              <strong>ENFOQUE ESTRATÉGICO</strong>
+              <span>Decisiones inteligentes que generan valor.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">⭐</div>
+            <div>
+              <strong>CALIDAD GARANTIZADA</strong>
+              <span>Estándares internacionales en cada proyecto.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sectors-grid-10">
+          <article class="sector-card-10">
+            <div class="sector-badge">01</div>
+            <div class="sector-icon">🏢</div>
+            <h3>DESARROLLO<br>INMOBILIARIO</h3>
+            <div class="sector-img" style="background-image: url('assets/images/hero.jpg')"></div>
+            <p>Desarrollos habitacionales, comerciales, mixtos e industriales.</p>
+          </article>
+
+          <article class="sector-card-10">
+            <div class="sector-badge">02</div>
+            <div class="sector-icon">🏙️</div>
+            <h3>CORPORATIVO</h3>
+            <div class="sector-img" style="background-image: url('assets/images/about-team.jpg')"></div>
+            <p>Oficinas, corporativos y espacios empresariales de alto desempeño.</p>
+          </article>
+
+          <article class="sector-card-10">
+            <div class="sector-badge">03</div>
+            <div class="sector-icon">🏭</div>
+            <h3>INDUSTRIAL</h3>
+            <div class="sector-img" style="background-image: url('assets/images/hero.jpg')"></div>
+            <p>Naves industriales, plantas, centros de distribución y parques industriales.</p>
+          </article>
+
+          <article class="sector-card-10">
+            <div class="sector-badge">04</div>
+            <div class="sector-icon">🍽️</div>
+            <h3>RESTAURANTERO</h3>
+            <div class="sector-img" style="background-image: url('assets/images/about-team.jpg')"></div>
+            <p>Restaurantes, cadenas de alimentos, cocinas industriales y proyectos gastronómicos.</p>
+          </article>
+
+          <article class="sector-card-10">
+            <div class="sector-badge">05</div>
+            <div class="sector-icon">🏨</div>
+            <h3>HOTELERÍA</h3>
+            <div class="sector-img" style="background-image: url('assets/images/hero.jpg')"></div>
+            <p>Hoteles, resorts, hospedaje ejecutivo y desarrollos turísticos.</p>
+          </article>
+
+          <article class="sector-card-10">
+            <div class="sector-badge">06</div>
+            <div class="sector-icon">🏥</div>
+            <h3>SALUD</h3>
+            <div class="sector-img" style="background-image: url('assets/images/about-team.jpg')"></div>
+            <p>Hospitales, clínicas, laboratorios y centros especializados en salud.</p>
+          </article>
+
+          <article class="sector-card-10">
+            <div class="sector-badge">07</div>
+            <div class="sector-icon">🎓</div>
+            <h3>EDUCACIÓN</h3>
+            <div class="sector-img" style="background-image: url('assets/images/hero.jpg')"></div>
+            <p>Escuelas, universidades, institutos y centros de formación.</p>
+          </article>
+
+          <article class="sector-card-10">
+            <div class="sector-badge">08</div>
+            <div class="sector-icon">🛍️</div>
+            <h3>COMERCIAL</h3>
+            <div class="sector-img" style="background-image: url('assets/images/about-team.jpg')"></div>
+            <p>Plazas comerciales, tiendas, retail, showroom y puntos de venta.</p>
+          </article>
+
+          <article class="sector-card-10">
+            <div class="sector-badge">09</div>
+            <div class="sector-icon">🏛️</div>
+            <h3>SECTOR PÚBLICO</h3>
+            <div class="sector-img" style="background-image: url('assets/images/hero.jpg')"></div>
+            <p>Infraestructura pública, instalaciones gubernamentales y espacios comunitarios.</p>
+          </article>
+
+          <article class="sector-card-10">
+            <div class="sector-badge">10</div>
+            <div class="sector-icon">🚜</div>
+            <h3>AGROINDUSTRIAL</h3>
+            <div class="sector-img" style="background-image: url('assets/images/about-team.jpg')"></div>
+            <p>Agroindustrias, empacadoras, almacenes, refrigeración y procesos productivos.</p>
+          </article>
+        </div>
       </div>
     </section>
   </div>
-
-  <!-- Bloque 2: Cómo te ayudamos -->
-  <div class="page-block" data-block="ayuda" id="ayuda">
-    <section class="section help"><div class="container">
-      <div class="section-heading reveal"><p class="section-label">Cómo te ayudamos</p><h2>Entramos por la necesidad.<br><span>No por un catálogo.</span></h2><p>Selecciona el escenario que más se parece al tuyo.</p></div>
-      <div class="need-grid">
-        <a class="need-card reveal" href="#gerencia"><span>01</span><h3>Necesito dirigir un proyecto</h3><p>Gerencia integral, control, coordinación y representación del cliente.</p><b>Ver solución →</b></a>
-        <a class="need-card reveal" href="#construccion"><span>02</span><h3>Necesito construir</h3><p>Ejecución selectiva de obra, especialidades, adecuaciones y ampliaciones.</p><b>Ver solución →</b></a>
-        <a class="need-card reveal" href="#inversion"><span>03</span><h3>Necesito evaluar una inversión</h3><p>Due diligence técnica, factibilidad, riesgos, costos y ruta de decisión.</p><b>Ver solución →</b></a>
-        <a class="need-card reveal" href="#ecosistema"><span>04</span><h3>Necesito desarrollar o equipar</h3><p>Real estate, estructuración, activos operativos y red de aliados.</p><b>Ver solución →</b></a>
-      </div>
-    </div></section>
-
-
-
-    <!-- Banner CTA Ejecutivo en Cómo te ayudamos -->
-    <section class="section help-cta-banner">
-      <div class="container">
-        <div class="help-cta-card reveal">
-          <div class="help-cta-content">
-            <span class="badge-gold">ATENCIÓN EJECUTIVA PERSONALIZADA</span>
-            <h2>¿No estás seguro de cuál es la ruta ideal para tu proyecto?</h2>
-            <p>Agenda una sesión estratégica sin compromiso con nuestros directores y evaluaremos juntos los riesgos, tiempos y costos de tu inversión.</p>
-          </div>
-          <div class="help-cta-actions">
-            <a class="btn btn-gold nav-cta" href="#contacto">Agendar Sesión Estratégica <span>→</span></a>
-            <a class="btn btn-outline" href="https://wa.me/523291228034" target="_blank" rel="noopener">WhatsApp Directo 📱</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Bloque 3: Gerencia Integral -->
-  <div class="page-block" data-block="gerencia" id="gerencia">
-    <section class="section flagship flagship-integrated">
-      <div class="container intellectual-head reveal">
-        <p class="section-label gold">Producto estrella</p>
-        <h2>Gerencia Integral de Proyectos</h2>
-        <p>Toda gran inversión necesita una dirección extraordinaria. CORDIKA concentra en un solo sistema las disciplinas que protegen el resultado.</p>
+  
+  <!-- Bloque: Qué hacemos -->
+  <div class="page-block" data-block="que-hacemos" id="que-hacemos">
+    <section class="section">
+      <div class="container reveal">
+        <h2 class="about-title-sans" style="margin-bottom: 50px;">¿Qué hacemos?</h2>
         
-        <div class="gi-clean-footer" style="margin-top: 36px;">
-          <p>La excelencia no se improvisa. Se administra.</p>
-          <div class="gi-footer-actions">
-            <a class="btn btn-gold" href="gerencia-integral.html">Explorar Gerencia Integral →</a>
-            <a class="btn btn-outline nav-cta" href="#contacto">Solicitar Diagnóstico</a>
+        <div class="services-5-cols">
+          <!-- Col 1 -->
+          <div class="service-col">
+            <div class="service-icon-circle">📋</div>
+            <h3 class="service-title">PROJECT <span class="gold-text">MANAGEMENT</span></h3>
+            <div class="service-dash"></div>
+            <p class="service-desc">Dirigimos tu proyecto de principio a fin con metodologías robustas, control total y enfoque en resultados.</p>
           </div>
+          
+          <!-- Col 2 -->
+          <div class="service-col">
+            <div class="service-icon-circle">🏢</div>
+            <h3 class="service-title">REAL <span class="gold-text">ESTATE</span></h3>
+            <div class="service-dash"></div>
+            <p class="service-desc">Desarrollamos, comercializamos y administramos propiedades que generan valor y oportunidades sostenibles.</p>
+          </div>
+          
+          <!-- Col 3 -->
+          <div class="service-col">
+            <div class="service-icon-circle">🏗️</div>
+            <h3 class="service-title">EQUIPAMIENTO</h3>
+            <div class="service-dash"></div>
+            <p class="service-desc">Proveemos y gestionamos maquinaria, mobiliario y equipos para proyectos de construcción, industria, hotelería y más.</p>
+          </div>
+          
+          <!-- Col 4 -->
+          <div class="service-col">
+            <div class="service-icon-circle">📈</div>
+            <h3 class="service-title">INVERSIÓN</h3>
+            <div class="service-dash"></div>
+            <p class="service-desc">Estructuramos oportunidades de inversión con análisis técnico-financiero para maximizar la rentabilidad y minimizar riesgos.</p>
+          </div>
+          
+          <!-- Col 5 -->
+          <div class="service-col">
+            <div class="service-icon-circle">💡</div>
+            <h3 class="service-title">CONSULTORÍA <span class="gold-text">ESTRATÉGICA</span></h3>
+            <div class="service-dash"></div>
+            <p class="service-desc">Acompañamos a empresas e inversionistas con visión estratégica, análisis experto y soluciones a la medida.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  
+  <!-- Bloque: Cómo podemos ayudarte -->
+  <div class="page-block" data-block="como-ayudamos" id="como-ayudamos">
+    <section class="section">
+      <div class="container reveal">
+        <h2 class="about-title-sans">¿Cómo podemos ayudarte?</h2>
+        <p class="about-lead-text-custom" style="margin: 0 auto 50px auto; max-width: 900px; text-align: center !important; font-size: 22px !important;">
+          Soluciones integrales para desarrollar, construir, equipar e invertir con inteligencia y visión estratégica.
+        </p>
+
+        <div class="help-cards-wrapper">
+          
+          <!-- Card 01 -->
+          <article class="help-card">
+            <div class="help-card-left">
+              <span class="help-num">01</span>
+              <div class="help-icon">📊</div>
+            </div>
+            <div class="help-card-mid">
+              <h3>GERENCIA INTEGRAL<br>DE PROYECTOS <span class="gold-text">★</span></h3>
+              <p>Dirigimos proyectos desde la estrategia hasta la entrega, representando los intereses de nuestros clientes con metodología, control y visión ejecutiva.</p>
+            </div>
+            <div class="help-card-right" style="background-image: url('assets/images/service-pm.jpg')"></div>
+          </article>
+
+          <!-- Card 02 -->
+          <article class="help-card">
+            <div class="help-card-left">
+              <span class="help-num">02</span>
+              <div class="help-icon">🏗️</div>
+            </div>
+            <div class="help-card-mid">
+              <h3>CONSTRUCCIÓN<br>ESPECIALIZADA</h3>
+              <p>Ejecutamos proyectos de construcción bajo los más altos estándares técnicos, operativos y de calidad, manteniendo siempre una separación ética entre la Gerencia del Proyecto y la ejecución de la obra.</p>
+            </div>
+            <div class="help-card-right" style="background-image: url('assets/images/service-construction.jpg')"></div>
+          </article>
+
+          <!-- Card 03 -->
+          <article class="help-card">
+            <div class="help-card-left">
+              <span class="help-num">03</span>
+              <div class="help-icon">🏢</div>
+            </div>
+            <div class="help-card-mid">
+              <h3>DESARROLLO<br>INMOBILIARIO</h3>
+              <p>Desarrollamos proyectos inmobiliarios con enfoque de valor, análisis de mercado, viabilidad, gestión y estrategia comercial para maximizar el potencial de cada desarrollo.</p>
+            </div>
+            <div class="help-card-right" style="background-image: url('assets/images/service-development.jpg')"></div>
+          </article>
+
+          <!-- Card 04 -->
+          <article class="help-card">
+            <div class="help-card-left">
+              <span class="help-num">04</span>
+              <div class="help-icon">📈</div>
+            </div>
+            <div class="help-card-mid help-card-gold">
+              <h3 style="color: #000;">CAPITAL E INVERSIÓN <span style="color: #000;">★★</span></h3>
+              <p style="color: #111; font-weight: 500;">Identificamos oportunidades, estructuramos proyectos y conectamos inversionistas con desarrollos de alto potencial para generar valor sostenible.</p>
+            </div>
+            <div class="help-card-right" style="background-image: url('assets/images/service-investment.jpg')"></div>
+          </article>
+
         </div>
       </div>
     </section>
   </div>
+  
+  <!-- Bloque: METOLOGÍA -->
+  <div class="page-block" data-block="metologia" id="metologia">
+    <section class="section">
+      <div class="container reveal">
+        <h2 class="about-title-sans">METOLOGÍA</h2>
+        <p class="about-lead-text-custom" style="margin: 0 auto 50px auto; max-width: 900px; text-align: center !important; font-size: 22px !important;">
+          Un proceso estructurado para transformar ideas en resultados.
+        </p>
 
-  <!-- Bloque 4: Método (D.I.C.E.®) -->
-  <div class="page-block" data-block="metodo" id="metodo">
-    <section class="section dice"><div class="container">
-      <div class="dice-head-wrapper reveal">
-        <div class="dice-head">
-          <p class="section-label">D.I.C.E.®</p>
-          <h2>Nuestro enfoque.<br><span>Nuestra esencia.</span></h2>
-          <p>Un código simple para convertir incertidumbre en resultados.</p>
-        </div>
-        <div class="dice-head-action">
-          <a class="btn btn-gold dice-pdf-btn" href="assets/docs/CORDIKA_Metodo_DICE.pdf" target="_blank" rel="noopener">Conoce más 📄</a>
+        <div class="metologia-process-wrapper">
+          <!-- Step 1 -->
+          <article class="metologia-card">
+            <div class="metologia-badge">01</div>
+            <div class="metologia-icon">🔍</div>
+            <h3>ENTENDER</h3>
+            <p>Comprendemos tus objetivos, necesidades y el contexto del proyecto.</p>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="metologia-card">
+            <div class="metologia-badge">02</div>
+            <div class="metologia-icon">🎯</div>
+            <h3>ANALIZAR</h3>
+            <p>Evaluamos la información clave, riesgos, oportunidades y viabilidad.</p>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="metologia-card">
+            <div class="metologia-badge">03</div>
+            <div class="metologia-icon">🔀</div>
+            <h3>ESTRATEGIA</h3>
+            <p>Diseñamos la mejor ruta de acción con enfoque técnico, comercial y financiero.</p>
+          </article>
+
+          <!-- Step 4 -->
+          <article class="metologia-card">
+            <div class="metologia-badge">04</div>
+            <div class="metologia-icon">⚙️</div>
+            <h3>PLANIFICAR</h3>
+            <p>Definimos alcances, recursos, tiempos, presupuestos y responsabilidades.</p>
+          </article>
+
+          <!-- Step 5 -->
+          <article class="metologia-card">
+            <div class="metologia-badge">05</div>
+            <div class="metologia-icon">🏗️</div>
+            <h3>EJECUTAR</h3>
+            <p>Gestionamos y supervisamos cada etapa con control, calidad y seguridad.</p>
+          </article>
+
+          <!-- Step 6 -->
+          <article class="metologia-card">
+            <div class="metologia-badge">06</div>
+            <div class="metologia-icon">📋</div>
+            <h3>ENTREGAR</h3>
+            <p>Verificamos, probamos y entregamos cumpliendo los más altos estándares.</p>
+          </article>
+
+          <!-- Step 7 -->
+          <article class="metologia-card">
+            <div class="metologia-badge">07</div>
+            <div class="metologia-icon">📈</div>
+            <h3>GENERAR VALOR</h3>
+            <p>Aseguramos resultados sostenibles y oportunidades de crecimiento.</p>
+          </article>
         </div>
       </div>
-      <div class="dice-grid">
-        <article class="reveal"><strong>D</strong><h3>Diagnosticamos</h3><p>Entendemos el escenario, los riesgos y la información disponible.</p></article>
-        <article class="reveal"><strong>I</strong><h3>Innovamos</h3><p>Diseñamos mejores caminos antes de comprometer recursos.</p></article>
-        <article class="reveal"><strong>C</strong><h3>Creamos</h3><p>Convertimos estrategia en soluciones claras, medibles y ejecutables.</p></article>
-        <article class="reveal"><strong>E</strong><h3>Entregamos</h3><p>Ejecutamos con disciplina, control y responsabilidad hasta el cierre.</p></article>
-      </div>
-      <div class="method-flow reveal"><span>01 Descubrimos</span><i></i><span>02 Diagnosticamos</span><i></i><span>03 Diseñamos</span><i></i><span>04 Dirigimos</span><i></i><span>05 Controlamos</span><i></i><span>06 Entregamos</span><i></i><span>07 Evolucionamos</span></div>
-    </div></section>
+    </section>
   </div>
+  
+  <!-- Bloque: Equipamiento -->
 
-  <!-- Bloque 5: Arquitectura de las Decisiones (La anatomía de una decisión) -->
-  <div class="page-block" data-block="arquitectura" id="arquitectura">
-    <section class="section decision decision-integrated">
-      <div class="container intellectual-head dark-head reveal" id="anatomia">
-        <p class="section-label gold">Arquitectura de las Decisiones®</p>
-        <h2>La anatomía de una decisión.</h2>
-        <p>Analizamos cada alternativa desde todas las perspectivas. Nada se deja al azar.</p>
+  <!-- Bloque: Equipamiento Restaurantes -->
+  <div class="page-block" data-block="equipamiento-restaurantes" id="equipamiento-restaurantes">
+    <section class="section">
+      <div class="container reveal">
         
-        <div class="decision-output" style="margin-top: 36px;"><span>Decisión recomendada</span><strong>Con base en datos, experiencia y visión estratégica.</strong></div>
+        <div class="equip-folder-wrapper">
+          <!-- The Folder Tab -->
+          <div class="equip-folder-tab">
+            ESPECIALIDAD CORDIKA
+          </div>
+
+          <!-- The Main Box -->
+          <div class="equip-folder-body">
+            
+            <div class="equip-header-flex">
+              <div class="equip-header-left">
+                <h2 class="equip-huge-title">EQUIPAMIENTO PARA<br>RESTAURANTES<br>Y COCINAS INDUSTRIALES</h2>
+                <p class="equip-gold-desc">Compra, venta y suministro de equipos, mobiliario y soluciones en acero inoxidable para restaurantes, cocinas industriales y proyectos gastronómicos.</p>
+              </div>
+              <div class="equip-header-right">
+                <div class="equip-star-circle">★</div>
+              </div>
+            </div>
+
+            <div class="equip-photo-grid">
+              <div class="equip-photo" style="background-image: url('assets/images/project-logistics.jpg')"></div>
+              <div class="equip-photo" style="background-image: url('assets/images/office-2.jpg')"></div>
+              <div class="equip-photo" style="background-image: url('assets/images/service-construction.jpg')"></div>
+              <div class="equip-photo" style="background-image: url('assets/images/project-rochling.jpg')"></div>
+            </div>
+
+            <div class="equip-icons-row">
+              <div class="equip-icon-item">
+                <div class="equip-svg-box">
+                  <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5">
+                    <path d="M3 14h18v4H3z M6 14l2-7h8l2 7 M10 7V3h4v4 M12 14v4 M7 18v2 M17 18v2"/>
+                  </svg>
+                </div>
+                <h4>EQUIPOS<br>PROFESIONALES</h4>
+              </div>
+              
+              <div class="equip-icon-item">
+                <div class="equip-svg-box">
+                  <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5">
+                    <path d="M3 8h18v12H3z M3 13h18 M12 13v7 M7 8V5h10v3 M8 10h8"/>
+                  </svg>
+                </div>
+                <h4>ACERO INOXIDABLE<br>DE ALTA CALIDAD</h4>
+              </div>
+
+              <div class="equip-icon-item">
+                <div class="equip-svg-box">
+                  <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-linecap="round">
+                    <path d="M7 2v6c0 2-1 4-1 4v10 M11 2v6c0 2 1 4 1 4v10 M9 2v10 M17 2v20 M17 2c-3 0-5 2-5 7v3h5"/>
+                  </svg>
+                </div>
+                <h4>MOBILIARIO<br>ESPECIALIZADO</h4>
+              </div>
+
+              <div class="equip-icon-item">
+                <div class="equip-svg-box">
+                  <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5">
+                    <path d="M6 15v4h12v-4 M6 15c-2.5 0-4-2-4-4 0-2 1.5-3.5 3-4 0-3 2.5-5 5-5 3.5 0 5 2.5 5 5 1.5 0.5 3 2 3 4 0 2-1.5 4-4 4 M9 19v2 M15 19v2"/>
+                  </svg>
+                </div>
+                <h4>ASESORÍA TÉCNICA<br>Y DISEÑO</h4>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   </div>
-
-
-  <!-- Bloque 5: Experiencia -->
-  <div class="page-block" data-block="experiencia" id="experiencia">
-    <section class="section projects"><div class="container projects-layout">
-      <div class="projects-intro reveal"><p class="section-label gold">Experiencia acumulada</p><h2>Proyectos que <span>construyen confianza.</span></h2><p>La experiencia del equipo fundador abarca industria, vivienda, salud, movilidad, urbanismo e infraestructura.</p><a class="btn btn-gold" href="#contacto">Solicitar perfil de experiencia →</a></div>
-      <div class="project-carousel reveal" aria-label="Experiencia representativa">
-        <article class="project-card active"><img src="assets/images/project-rochling.jpg" alt="Röchling Automotive"><div><span>Industrial · Silao</span><h3>Röchling Automotive</h3><p>Gerencia y coordinación de proyecto industrial para el sector automotriz.</p></div></article>
-        <article class="project-card"><img src="assets/images/project-logistics.jpg" alt="Centro industrial y logístico"><div><span>Logística · Guadalajara</span><h3>Centros industriales y logísticos</h3><p>Planeación, control y seguimiento para operaciones de gran escala.</p></div></article>
-        <article class="project-card"><img src="assets/images/project-copo.jpg" alt="Proyecto industrial COPO"><div><span>Manufactura · Bajío</span><h3>COPO Textile</h3><p>Coordinación técnica, supervisión y control de obra.</p></div></article>
-        <article class="project-card"><img src="assets/images/project-itas.jpg" alt="Proyecto industrial ITAS"><div><span>Industrial · Bajío</span><h3>ITAS</h3><p>Experiencia aplicada a manufactura e infraestructura.</p></div></article>
-        <div class="carousel-controls"><button type="button" data-prev aria-label="Proyecto anterior">←</button><div class="carousel-dots"></div><button type="button" data-next aria-label="Proyecto siguiente">→</button></div>
-      </div>
-    </div></section>
-  </div>
-
-  <!-- Bloque 6: CKS -->
-  <div class="page-block" data-block="cks" id="cks">
-    <section class="section cks-experience"><div class="container cks-header reveal"><div><p class="section-label gold">El ADN de CORDIKA</p><h2>CKS® — El conocimiento que construye mejores decisiones.</h2></div><p>Raíces que sostienen. Un tronco que integra. Ramas que convierten experiencia en crecimiento, innovación, colaboración y valor para el cliente.</p></div><div class="container cks-footer reveal"><p>Cada proyecto deja conocimiento. Cada aprendizaje se transforma en criterio. Cada criterio mejora el siguiente proyecto.</p><a class="btn btn-gold" href="assets/docs/ADN.pdf" data-pdf-title="El ADN de CORDIKA">Explorar CKS® →</a></div></section>
-  </div>
-
-  <!-- Bloque 7: Contacto -->
-  <div class="page-block" data-block="contacto" id="contacto">
-    <section class="section section-contacto-centered">
-      <div class="container centered-contact-wrapper reveal">
-        <div class="modal-card section-card-embed">
-          <div class="modal-header">
-            <h2>Sesión Estratégica</h2>
-            <div class="modal-accent-bar"></div>
-            <p class="modal-subtitle">Llena tus datos para coordinar una reunión ejecutiva.</p>
-          </div>
-
-          <form id="strategic-session-form" class="modal-form">
-            <div class="modal-field">
-              <div class="modal-input-wrapper">
-                <span class="modal-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </span>
-                <input type="text" id="form-name" name="name" placeholder="Nombre completo *" required>
-              </div>
-            </div>
-
-            <div class="modal-field">
-              <div class="modal-input-wrapper">
-                <span class="modal-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                </span>
-                <input type="tel" id="form-whatsapp" name="whatsapp" placeholder="WhatsApp (ej. 329 122 8034) *" required>
-              </div>
-            </div>
-
-            <div class="modal-field">
-              <div class="modal-input-wrapper textarea-wrapper">
-                <span class="modal-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                </span>
-                <textarea id="form-message" name="message" rows="3" placeholder="Mensaje / Platícanos sobre tu proyecto *" required></textarea>
-              </div>
-            </div>
-
-            <div class="modal-actions">
-              <button type="submit" class="modal-btn-submit">
-                <span>Enviar Sesión Estratégica</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </button>
-            </div>
-            <div id="form-feedback" class="modal-feedback" aria-live="polite"></div>
-          </form>
-        </div>
-
-        <div class="centered-contact-info">
-          <div class="contact-pill">
-            <span class="icon">📱</span>
-            <a href="tel:+523291228034">+52 329 122 8034</a>
-            <span class="sep">•</span>
-            <a href="tel:+523291228035">+52 329 122 8035</a>
-          </div>
-          <div class="contact-pill">
-            <span class="icon">✉</span>
-            <a href="mailto:contacto@cordikarealestate.com">contacto@cordikarealestate.com</a>
-          </div>
+  
+  <div class="page-block" data-block="equipamiento" id="equipamiento">
+    <section class="section">
+      <div class="container reveal">
+        <p class="section-label gold">Soluciones Físicas</p>
+        <h2>Equipamiento</h2>
+        <div class="luxury-grid">
+          <article class="luxury-card">
+            <div class="luxury-icon">⚙️</div>
+            <h3>Maquinaria y Tecnología</h3>
+            <p style="color: #cbd7de; line-height: 1.6; margin-top: 12px;">Desarrollamos soluciones de equipamiento de alta tecnología para potenciar la operación de tu proyecto comercial e industrial.</p>
+          </article>
         </div>
       </div>
     </section>
   </div>
+
+  <!-- Bloque: Cursos -->
+
+  <!-- Bloque: Cursos -->
+  <div class="page-block" data-block="cursos" id="cursos">
+    <section class="section">
+      <div class="container reveal" style="max-width: 1400px;">
+        <h2 class="about-title-sans" style="text-align: center !important; margin-bottom: 50px;">CURSOS Y FORMACIÓN</h2>
+        
+        <div class="cursos-grid">
+          
+          <!-- Curso 01 -->
+          <article class="curso-card" id="curso-supervision">
+            <div class="curso-header">
+              <div class="curso-num">01</div>
+              <h3>SUPERVISIÓN<br>DE NIVEL<br>INTERNACIONAL</h3>
+              <div class="curso-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <!-- Hardhat top -->
+                  <path d="M12 3c-4 0-7 2.5-7 6h14c0-3.5-3-6-7-6z"/>
+                  <!-- Hardhat brim -->
+                  <path d="M4 9h16v2H4z"/>
+                  <!-- Top ridge of hardhat -->
+                  <path d="M10 3v-1h4v1"/>
+                  <!-- Head/Face outline under hat -->
+                  <path d="M8 11v1c0 2.2 1.8 4 4 4s4-1.8 4-4v-1"/>
+                  <!-- Shoulders -->
+                  <path d="M4 21c0-3 3-5 5-5h6c2 0 5 2 5 5"/>
+                  <!-- Collar & Tie -->
+                  <path d="M10 16l2 2 2-2"/>
+                  <path d="M12 18v3l-1 1h2l-1-1"/>
+                </svg>
+              </div>
+            </div>
+            <div class="curso-body">
+              <p>Formar supervisores capaces de dirigir con <span class="gold-text">visión integral</span>, criterio técnico, <span class="gold-text">liderazgo</span> y control documentado.</p>
+            </div>
+            <div class="curso-footer" style="background-image: url('assets/images/service-construction.jpg')"></div>
+          </article>
+
+          <!-- Curso 02 -->
+          <article class="curso-card" id="curso-seguridad">
+            <div class="curso-header">
+              <div class="curso-num">02</div>
+              <h3>SEGURIDAD Y<br>SALUD EN EL<br>TRABAJO</h3>
+              <div class="curso-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5">
+                  <path d="M12 2l8 3.5v5.5c0 5.2-3.6 10-8 11.5-4.4-1.5-8-6.3-8-11.5V5.5L12 2z M9 12h6 M12 9v6"/>
+                </svg>
+              </div>
+            </div>
+            <div class="curso-body">
+              <p>Desarrollar competencias para <span class="gold-text">prevenir incidentes</span>, reconocer riesgos y ejecutar tareas bajo controles verificables.</p>
+            </div>
+            <div class="curso-footer" style="background-image: url('assets/images/project-logistics.jpg')"></div>
+          </article>
+
+          <!-- Curso 03 -->
+          <article class="curso-card" id="curso-calidad">
+            <div class="curso-header">
+              <div class="curso-num">03</div>
+              <h3>PLAN DE<br>CALIDAD<br>CORDIKA</h3>
+              <div class="curso-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5">
+                  <circle cx="12" cy="8" r="5"/>
+                  <path d="M9 12.5L7 22l5-2.5 5 2.5-2-9.5 M10 8l1.5 1.5 3-3"/>
+                </svg>
+              </div>
+            </div>
+            <div class="curso-body">
+              <p>Convertir requisitos, riesgos y tolerancias en <span class="gold-text">controles auditables</span> antes de liberar, estimar, pagar o entregar.</p>
+            </div>
+            <div class="curso-footer" style="background-image: url('assets/images/service-pm.jpg')"></div>
+          </article>
+
+          <!-- Curso 04 -->
+          <article class="curso-card" id="curso-auditorias">
+            <div class="curso-header">
+              <div class="curso-num">04</div>
+              <h3>AUDITORÍAS<br>DE<br>PROYECTOS</h3>
+              <div class="curso-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z M14 2v6h6 M9 14h6 M9 18h6 M9 10h2"/>
+                </svg>
+              </div>
+            </div>
+            <div class="curso-body">
+              <p>Fortalecer la capacidad para evaluar de forma objetiva, <span class="gold-text">detectar riesgos</span> y promover decisiones oportunas.</p>
+            </div>
+            <div class="curso-footer" style="background-image: url('assets/images/office.jpg')"></div>
+          </article>
+
+          <!-- Curso 05 -->
+          <article class="curso-card" id="curso-lean">
+            <div class="curso-header">
+              <div class="curso-num">05</div>
+              <h3>LEAN<br>CONSTRUCTION<br>&nbsp;</h3>
+              <div class="curso-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5">
+                  <path d="M18 20V10 M12 20V4 M6 20v-6 M3 20h18 M3 10l5-5 4 4 8-8 M16 4h4v4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="curso-body">
+              <p>Aplicar principios de flujo, confiabilidad y <span class="gold-text">mejora continua</span> para eliminar desperdicios y maximizar el valor.</p>
+            </div>
+            <div class="curso-footer" style="background-image: url('assets/images/about.jpg')"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Bloque individual: curso-supervision -->
+  <div class="page-block" data-block="curso-supervision" id="curso-supervision">
+    <section class="section curso-detail-section">
+      <div class="container reveal">
+        <div class="curso-detail-layout">
+          
+          <!-- Left Side: Content -->
+          <div class="curso-detail-content">
+            <div class="curso-detail-badge">
+              <span>01</span>
+              <div class="curso-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 0-7 2.5-7 6h14c0-3.5-3-6-7-6z"/><path d="M4 9h16v2H4z"/><path d="M10 3v-1h4v1"/><path d="M8 11v1c0 2.2 1.8 4 4 4s4-1.8 4-4v-1"/><path d="M4 21c0-3 3-5 5-5h6c2 0 5 2 5 5"/><path d="M10 16l2 2 2-2"/><path d="M12 18v3l-1 1h2l-1-1"/></svg>
+              </div>
+            </div>
+            
+            <h2 class="curso-detail-title">SUPERVISIÓN<br>DE NIVEL<br><span style="color:#d4af37">INTERNACIONAL</span></h2>
+            
+            <div class="curso-detail-text">
+              <p>Formar supervisores capaces de dirigir con <span class="gold-text">visión integral</span>, criterio técnico, <span class="gold-text">liderazgo</span> y control documentado.</p>
+            </div>
+          </div>
+
+          <!-- Right Side: Image -->
+          <div class="curso-detail-visual">
+            <div class="curso-detail-frame"></div>
+            <div class="curso-detail-image-wrapper">
+               <div class="curso-detail-image" style="background-image: url('assets/images/building.jpg');"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bloque individual: curso-seguridad -->
+  <div class="page-block" data-block="curso-seguridad" id="curso-seguridad">
+    <section class="section curso-detail-section">
+      <div class="container reveal">
+        <div class="curso-detail-layout">
+          
+          <!-- Left Side: Content -->
+          <div class="curso-detail-content">
+            <div class="curso-detail-badge">
+              <span>02</span>
+              <div class="curso-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-linejoin="round">
+  <!-- Shield outline -->
+  <path d="M12 2.5l8 3.5v5.5c0 5.2-3.6 10-8 11.5-4.4-1.5-8-6.3-8-11.5V6L12 2.5z"/>
+  <!-- Hollow thick plus sign -->
+  <path d="M11 9 v2 h-2 v2 h2 v2 h2 v-2 h2 v-2 h-2 v-2 z" />
+</svg>
+              </div>
+            </div>
+            
+            <h2 class="curso-detail-title">SEGURIDAD Y<br>SALUD EN EL<br><span style="color:#d4af37">TRABAJO</span></h2>
+            
+            <div class="curso-detail-text">
+              <p>Desarrollar competencias para <span class="gold-text">prevenir incidentes</span>, reconocer riesgos y ejecutar tareas bajo controles verificables.</p>
+            </div>
+          </div>
+
+          <!-- Right Side: Image -->
+          <div class="curso-detail-visual">
+            <div class="curso-detail-frame"></div>
+            <div class="curso-detail-image-wrapper">
+               <div class="curso-detail-image" style="background-image: url('assets/images/construction.webp');"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bloque individual: curso-calidad -->
+  <div class="page-block" data-block="curso-calidad" id="curso-calidad">
+    <section class="section curso-detail-section">
+      <div class="container reveal">
+        <div class="curso-detail-layout">
+          
+          <!-- Left Side: Content -->
+          <div class="curso-detail-content">
+            <div class="curso-detail-badge">
+              <span>03</span>
+              <div class="curso-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+  <rect x="5.5" y="1.5" width="13" height="13" rx="3" transform="rotate(0, 12, 8)" />
+  <rect x="5.5" y="1.5" width="13" height="13" rx="3" transform="rotate(45, 12, 8)" />
+  <path d="M9 8.5l2 2 4-4" />
+  <path d="M7.5 13.5v8.5l4.5-2.5 4.5 2.5v-8.5" />
+</svg>
+              </div>
+            </div>
+            
+            <h2 class="curso-detail-title">PLAN DE<br>CALIDAD<br><span style="color:#d4af37">CORDIKA</span></h2>
+            
+            <div class="curso-detail-text">
+              <p>Convertir requisitos, riesgos y tolerancias en <span class="gold-text">controles auditables</span> antes de liberar, estimar, pagar o entregar.</p>
+            </div>
+          </div>
+
+          <!-- Right Side: Image -->
+          <div class="curso-detail-visual">
+            <div class="curso-detail-frame"></div>
+            <div class="curso-detail-image-wrapper">
+               <div class="curso-detail-image" style="background-image: url('assets/images/calidad-rebar-hd.jpg');"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bloque individual: curso-auditorias -->
+  <div class="page-block" data-block="curso-auditorias" id="curso-auditorias">
+    <section class="section curso-detail-section">
+      <div class="container reveal">
+        <div class="curso-detail-layout">
+          
+          <!-- Left Side: Content -->
+          <div class="curso-detail-content">
+            <div class="curso-detail-badge">
+              <span>04</span>
+              <div class="curso-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z M14 2v6h6 M9 14h6 M9 18h6 M9 10h2"/></svg>
+              </div>
+            </div>
+            
+            <h2 class="curso-detail-title">AUDITORÍAS<br>DE<br><span style="color:#d4af37">PROYECTOS</span></h2>
+            
+            <div class="curso-detail-text">
+              <p>Fortalecer la capacidad para evaluar de forma objetiva, <span class="gold-text">detectar riesgos</span> y promover decisiones oportunas.</p>
+            </div>
+          </div>
+
+          <!-- Right Side: Image -->
+          <div class="curso-detail-visual">
+            <div class="curso-detail-frame"></div>
+            <div class="curso-detail-image-wrapper">
+               <div class="curso-detail-image" style="background-image: url('assets/images/office.jpg');"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bloque individual: curso-lean -->
+  <div class="page-block" data-block="curso-lean" id="curso-lean">
+    <section class="section curso-detail-section">
+      <div class="container reveal">
+        <div class="curso-detail-layout">
+          
+          <!-- Left Side: Content -->
+          <div class="curso-detail-content">
+            <div class="curso-detail-badge">
+              <span>05</span>
+              <div class="curso-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold2)" stroke-width="1.5"><path d="M18 20V10 M12 20V4 M6 20v-6 M3 20h18 M3 10l5-5 4 4 8-8 M16 4h4v4"/></svg>
+              </div>
+            </div>
+            
+            <h2 class="curso-detail-title">LEAN<br><span style="color:#d4af37">CONSTRUCTION</span></h2>
+            
+            <div class="curso-detail-text">
+              <p>Aplicar principios de flujo, confiabilidad y <span class="gold-text">mejora continua</span> para eliminar desperdicios y maximizar el valor.</p>
+            </div>
+          </div>
+
+          <!-- Right Side: Image -->
+          <div class="curso-detail-visual">
+            <div class="curso-detail-frame"></div>
+            <div class="curso-detail-image-wrapper">
+               <div class="curso-detail-image" style="background-image: url('assets/images/about.jpg');"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  
+  
+  
   <!-- Modal Flotante Popup para Sesión Estratégica -->
   <div id="modal-session" class="modal-backdrop" aria-hidden="true">
     <div class="modal-card" role="dialog" aria-labelledby="modal-title-popup">
@@ -385,16 +1143,436 @@
         <div class="modal-accent-bar"></div>
       </div>
       <div class="pdf-viewer-container">
-        <iframe id="pdf-frame" src="assets/docs/CORDIKA_Metodo_DICE.pdf" title="Visor PDF Método D.I.C.E. CORDIKA"></iframe>
+        <iframe id="pdf-frame" src="assets/docs/CORDIKA_Metodo_DICE.pdf" title="Visor PDF"></iframe>
       </div>
       <div class="pdf-modal-footer">
         <a class="btn btn-gold btn-sm" id="modal-pdf-download" href="assets/docs/CORDIKA_Metodo_DICE.pdf" target="_blank" download>Descargar PDF 📥</a>
       </div>
     </div>
   </div>
+
+  
+
+
+  <!-- Bloque individual: inv-copropiedad -->
+  <div class="page-block" data-block="inv-copropiedad" id="inv-copropiedad">
+    <section class="section inv-editorial-section">
+      <div class="inv-editorial-container">
+        
+        <div class="inv-editorial-header">
+          <div class="inv-editorial-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="3" />
+              <path d="M6 19v-2a2 2 0 0 1 2-2h1" />
+              <circle cx="8" cy="11" r="2" />
+              <path d="M18 19v-2a2 2 0 0 0-2-2h-1" />
+              <circle cx="16" cy="11" r="2" />
+              <path d="M9 19v-3a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v3" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+            COPROPIEDAD
+          </div>
+          <h2 class="inv-editorial-title">Uso residencial + participación en <span style="color: #a3e635;">plusvalía</span></h2>
+        </div>
+
+        <div class="inv-editorial-content">
+          <div class="inv-editorial-image-col">
+            <div class="inv-editorial-image-frame">
+              <img src="assets/images/inv-copropiedad-hd.jpg" alt="Copropiedad Premium">
+              <div class="inv-editorial-image-overlay"></div>
+            </div>
+            <div class="inv-editorial-stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Gestión Integral Cordika</span>
+            </div>
+          </div>
+          
+          <div class="inv-editorial-text-col">
+            <h3 class="inv-editorial-subtitle">El modelo inteligente de inversión en bienes raíces</h3>
+            <p class="inv-editorial-desc">
+              Accede a desarrollos inmobiliarios premium mediante un esquema estructurado que te permite disfrutar de propiedades de alto nivel, al mismo tiempo que aseguras una sólida estrategia de apreciación de capital.
+            </p>
+            
+            <div class="inv-editorial-features">
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Uso Residencial Exclusivo</h4>
+                  <p>Disfruta de estancias garantizadas en propiedades completamente administradas.</p>
+                </div>
+              </div>
+
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Crecimiento del Capital</h4>
+                  <p>Tu fracción del inmueble se aprecia con el mercado, protegiendo tu inversión.</p>
+                </div>
+              </div>
+
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Cero Preocupaciones</h4>
+                  <p>Nos encargamos del mantenimiento, aspectos legales y toda la logística operativa.</p>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#contacto" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Agendar asesoría</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  
+
+  
+
+  
+
+
+  <!-- Bloque individual: inv-flipping -->
+  <div class="page-block" data-block="inv-flipping" id="inv-flipping">
+    <section class="section inv-editorial-section">
+      <div class="inv-editorial-container">
+        
+        <div class="inv-editorial-header">
+          <div class="inv-editorial-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h6v6" />
+              <path d="M10 14L21 3" />
+              <path d="M15 15l-3 3-5-5 3-3" />
+              <path d="M7 10l-4 4a2.12 2.12 0 0 0 3 3l4-4" />
+            </svg>
+            FLIPPING
+          </div>
+          <h2 class="inv-editorial-title">Ganancia rápida mediante <span style="color: #a3e635;">remodelaciones</span></h2>
+        </div>
+
+        <div class="inv-editorial-content">
+          <div class="inv-editorial-image-col">
+            <div class="inv-editorial-image-frame">
+              <img src="assets/images/inv-flipping-hd.jpg" alt="Flipping Inmobiliario">
+              <div class="inv-editorial-image-overlay"></div>
+            </div>
+            <div class="inv-editorial-stat-card">
+              <span class="stat-number">ROI</span>
+              <span class="stat-label">Maximización de Valor</span>
+            </div>
+          </div>
+          
+          <div class="inv-editorial-text-col">
+            <h3 class="inv-editorial-subtitle">El arte de reposicionar activos inmobiliarios</h3>
+            <p class="inv-editorial-desc">
+              Un modelo agresivo y estructurado enfocado en la adquisición de inmuebles con oportunidad de mejora, aplicando renovaciones estratégicas de alto impacto para una venta rápida y rentable.
+            </p>
+            
+            <div class="inv-editorial-features">
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Análisis de Oportunidad</h4>
+                  <p>Identificamos propiedades por debajo del valor de mercado con alto potencial de apreciación post-remodelación.</p>
+                </div>
+              </div>
+
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Ejecución Eficiente</h4>
+                  <p>Nuestro equipo de construcción ejecuta mejoras clave que elevan la percepción de valor sin sobrecostos.</p>
+                </div>
+              </div>
+
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Retorno Acelerado</h4>
+                  <p>Comercialización inmediata enfocada en recuperar la inversión y materializar la ganancia en tiempo récord.</p>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#contacto" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Analizar oportunidades</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- Bloque individual: inv-renta -->
+  <div class="page-block" data-block="inv-renta" id="inv-renta">
+    <section class="section inv-editorial-section">
+      <div class="inv-editorial-container">
+        
+        <div class="inv-editorial-header">
+          <div class="inv-editorial-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+              <path d="M3 3v5h5" />
+            </svg>
+            RENTA HÍBRIDA
+          </div>
+          <h2 class="inv-editorial-title">Optimización de ingresos vía <span style="color: #a3e635;">algoritmos</span></h2>
+        </div>
+
+        <div class="inv-editorial-content">
+          <div class="inv-editorial-image-col">
+            <div class="inv-editorial-image-frame">
+              <img src="assets/images/inv-renta-hd.jpg" alt="Renta Híbrida">
+              <div class="inv-editorial-image-overlay"></div>
+            </div>
+            <div class="inv-editorial-stat-card">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Gestión Algorítmica</span>
+            </div>
+          </div>
+          
+          <div class="inv-editorial-text-col">
+            <h3 class="inv-editorial-subtitle">Maximizando el flujo de efectivo dinámicamente</h3>
+            <p class="inv-editorial-desc">
+              Olvídate de la renta tradicional. Nuestro modelo híbrido combina el alquiler a corto, mediano y largo plazo utilizando algoritmos que ajustan precios y disponibilidad basándose en demanda en tiempo real.
+            </p>
+            
+            <div class="inv-editorial-features">
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Pricing Dinámico</h4>
+                  <p>Inteligencia artificial que analiza estacionalidad y eventos locales para cobrar siempre la tarifa óptima.</p>
+                </div>
+              </div>
+
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Ocupación Maximizada</h4>
+                  <p>Alternancia inteligente entre plataformas vacacionales y contratos de meses para reducir tiempos vacíos.</p>
+                </div>
+              </div>
+
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Operación Llave en Mano</h4>
+                  <p>Nos ocupamos del check-in, limpieza, atención al huésped y mantenimiento de tu propiedad.</p>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#contacto" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Optimizar mi propiedad</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- Bloque individual: inv-liquidez -->
+  <div class="page-block" data-block="inv-liquidez" id="inv-liquidez">
+    <section class="section inv-editorial-section">
+      <div class="inv-editorial-container">
+        
+        <div class="inv-editorial-header">
+          <div class="inv-editorial-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+            </svg>
+            LIQUIDEZ DIGITAL
+          </div>
+          <h2 class="inv-editorial-title">Venta en marketplace <span style="color: #a3e635;">secundario</span></h2>
+        </div>
+
+        <div class="inv-editorial-content">
+          <div class="inv-editorial-image-col">
+            <div class="inv-editorial-image-frame">
+              <img src="assets/images/inv-liquidez-hd.jpg" alt="Liquidez Digital">
+              <div class="inv-editorial-image-overlay"></div>
+            </div>
+            <div class="inv-editorial-stat-card">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Mercado Líquido</span>
+            </div>
+          </div>
+          
+          <div class="inv-editorial-text-col">
+            <h3 class="inv-editorial-subtitle">La evolución del Real Estate hacia activos líquidos</h3>
+            <p class="inv-editorial-desc">
+              Los bienes raíces tradicionales inmovilizan tu capital. Con nuestro esquema de liquidez digital, tu participación en el proyecto se puede transaccionar fácilmente, brindándote flexibilidad total.
+            </p>
+            
+            <div class="inv-editorial-features">
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Fraccionalización de Activos</h4>
+                  <p>Tu inversión se representa en instrumentos digitales que pueden dividirse o transferirse de manera ágil.</p>
+                </div>
+              </div>
+
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Mercado Secundario Privado</h4>
+                  <p>Acceso a un marketplace donde puedes vender tu posición a otros inversionistas de nuestra red.</p>
+                </div>
+              </div>
+
+              <div class="inv-feature">
+                <div class="inv-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="inv-feature-text">
+                  <h4>Transparencia y Seguridad</h4>
+                  <p>Registros inmutables y contratos claros garantizan la titularidad y protección de tu patrimonio.</p>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#contacto" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Conocer más del modelo</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Bloque: Contacto -->
+  <div class="page-block" data-block="contacto" id="contacto">
+    <section class="section contact-premium-section">
+      <div class="contact-premium-container">
+        
+        <div class="contact-premium-header">
+          <div class="inv-editorial-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#var(--gold2, #d4af37)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            CONTACTO
+          </div>
+          <h2 class="contact-premium-title">Hablemos de tu <span style="color: var(--gold2, #d4af37);">proyecto</span></h2>
+          <p class="contact-premium-subtitle">Estamos listos para escucharte y estructurar la mejor solución para tus necesidades inmobiliarias.</p>
+        </div>
+
+        <div class="contact-premium-grid">
+          
+          <!-- Left: Info & Map -->
+          <div class="contact-premium-info-col">
+            
+            <div class="contact-cards-wrap">
+              <div class="c-card">
+                <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                <div class="c-text">
+                  <h4>Oficina Central</h4>
+                  <p>C. Perla 3776.<br>Col. Loma Bonita, Zapopan.</p>
+                </div>
+              </div>
+              
+              <div class="c-card">
+                <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                <div class="c-text">
+                  <h4>Líneas de Atención</h4>
+                  <p>329 122 8034<br>329 122 8035</p>
+                </div>
+              </div>
+
+              <div class="c-card">
+                <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+                <div class="c-text">
+                  <h4>WhatsApp Directo</h4>
+                  <p style="color: #a3e635; font-weight: 600; letter-spacing: 1px;">PENDIENTE</p>
+                </div>
+              </div>
+
+              <div class="c-card">
+                <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+                <div class="c-text">
+                  <h4>Correo Electrónico</h4>
+                  <p>contacto@cordikarealestate.com</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- THE MAP -->
+            <div class="contact-map-wrapper">
+              <iframe 
+                src="https://www.google.com/maps?q=Calle+Perla+3776,+Loma+Bonita,+Zapopan&output=embed" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact-premium-form-col">
+            <form class="c-form" onsubmit="event.preventDefault(); alert('Mensaje enviado. Nos pondremos en contacto pronto.');">
+              <h3>Envíanos un mensaje</h3>
+              <p>Completa el formulario y un asesor estratégico se comunicará contigo a la brevedad.</p>
+              
+              <div class="c-input-group">
+                <label>Nombre Completo</label>
+                <input type="text" required>
+              </div>
+              
+              <div class="c-input-group">
+                <label>Correo Electrónico</label>
+                <input type="email" required>
+              </div>
+              
+              <div class="c-input-group">
+                <label>Teléfono</label>
+                <input type="tel" required>
+              </div>
+              
+              <div class="c-input-group">
+                <label>¿En qué podemos ayudarte?</label>
+                <textarea rows="5" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary c-submit-btn">Enviar Mensaje</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
 </main>
 <footer class="site-footer">
-  <div class="container footer-top-grid">
+  <div class="container footer-top-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 40px;">
     <div class="footer-brand-col">
       <img src="assets/images/logo-cordika.png" alt="CORDIKA Real Estate" class="footer-logo">
       <span class="footer-badge">DIRECCIÓN ESTRATÉGICA DE PROYECTOS</span>
@@ -407,22 +1585,11 @@
     <div class="footer-nav-col">
       <h3 class="footer-title">Navegación</h3>
       <ul class="footer-links">
+        <li><a href="#inicio">Inicio</a></li>
         <li><a href="#nosotros">Quiénes decidimos ser</a></li>
-        <li><a href="#ayuda">Cómo te ayudamos</a></li>
-        <li><a href="#gerencia">Gerencia integral</a></li>
-        <li><a href="#inicio">Sectores</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-nav-col">
-      <h3 class="footer-title">Metodología & Criterio</h3>
-      <ul class="footer-links">
-        <li><a href="#metodo">Método D.I.C.E.®</a></li>
-        <li><a href="#arquitectura">Anatomía de una decisión</a></li>
-        <li><a href="#nosotros">El Ecosistema CORDIKA®</a></li>
-        <li><a href="#cks">CKS® Knowledge System</a></li>
-        <li><a href="cks.html">Explorar Plataforma CKS®</a></li>
+        <li><a href="#equipamiento">Equipamiento</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#inversion">Inversión</a></li>
       </ul>
     </div>
 
@@ -464,6 +1631,111 @@
     </div>
   </div>
 </footer>
-<script src="app.js"></script>
+<script src="app.js?v=43.0"></script>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/523291228034?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20CORDIKA" class="float-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+
+  <!-- MODAL ECOSISTEMA (Pantalla Emergente para los Círculos) -->
+  <div id="modal-ecosystem" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-labelledby="modal-eco-title" style="max-width: 500px;">
+      <button class="modal-close" id="modal-eco-close" aria-label="Cerrar ventana">&times;</button>
+      <div class="modal-header">
+        <div id="modal-eco-icon" style="font-size: 40px; margin-bottom: 15px;"></div>
+        <h2 id="modal-eco-title" style="font-size: 22px; line-height: 1.2; margin-bottom: 10px;">Título</h2>
+        <div class="modal-accent-bar" style="margin: 0 auto 20px auto;"></div>
+      </div>
+      <div class="modal-body" style="padding: 0 20px 20px 20px; text-align: left;">
+        <ul id="modal-eco-list" class="eco-modal-list">
+          <!-- Dinámico -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const ecoData = {
+        1: {
+          icon: "👥", title: "GERENCIA DE PROYECTOS Y GESTIÓN DE OBRA",
+          items: ["Planeación integral", "Control de costos, tiempos y calidad", "Gestión de riesgos", "Coordinación de contratistas", "Reportes y cierre"]
+        },
+        2: {
+          icon: "🏗️", title: "CONSTRUCCIÓN DE PROYECTOS",
+          items: ["Ejecución de obra", "Control de calidad", "Seguridad y cumplimiento", "Entrega llave en mano"]
+        },
+        3: {
+          icon: "🏢", title: "ADMINISTRACIÓN DE PROYECTOS E INMUEBLES",
+          items: ["Administración de edificios, plazas, parques industriales, cotos y fraccionamientos", "Gestión operativa y financiera", "Atención a usuarios e inquilinos", "Reportes y cumplimiento"]
+        },
+        4: {
+          icon: "⚙️", title: "MANTENIMIENTO Y FACILITY MANAGEMENT",
+          items: ["Mantenimiento preventivo y correctivo", "Conservación de instalaciones", "Gestión de proveedores", "Programas de mantenimiento"]
+        },
+        5: {
+          icon: "🎓", title: "CORDIKA ACADEMY CAPACITACIÓN",
+          items: ["Cursos y diplomados", "Programas in company", "Certificaciones", "Talleres y conferencias", "Formación a la medida"]
+        },
+        6: {
+          icon: "💰", title: "CORDIKA FRACTIONAL SMART PORTFOLIO INVERSIÓN",
+          items: ["Inversión fraccionada", "Portafolios diversificados", "Vehículos legales especializados", "Transparencia y reportes", "Salidas estratégicas"]
+        },
+        7: {
+          icon: "🪑", title: "EQUIPAMIENTO Y MOBILIARIO RESTAURANTERO",
+          items: ["Equipamiento integral para restaurantes", "Mobiliario y decoración", "Asesoría y diseño funcional", "Instalación y soporte"]
+        }
+      };
+
+      const modalEco = document.getElementById('modal-ecosystem');
+      const closeEco = document.getElementById('modal-eco-close');
+      const ecoTitle = document.getElementById('modal-eco-title');
+      const ecoIcon = document.getElementById('modal-eco-icon');
+      const ecoList = document.getElementById('modal-eco-list');
+
+      function openEcoModal(id) {
+        const data = ecoData[id];
+        if (!data) return;
+        ecoTitle.innerHTML = data.title;
+        ecoIcon.innerHTML = data.icon;
+        ecoList.innerHTML = data.items.map(item => '<li>' + item + '</li>').join('');
+        modalEco.classList.add('is-open');
+        modalEco.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeEcoModal() {
+        modalEco.classList.remove('is-open');
+        modalEco.setAttribute('aria-hidden', 'true');
+      }
+
+      closeEco.addEventListener('click', closeEcoModal);
+      modalEco.addEventListener('click', (e) => {
+        if (e.target === modalEco) closeEcoModal();
+      });
+
+      // Bind clicks on Desktop circles
+      document.querySelectorAll('.cycle-node-circle').forEach(circle => {
+        circle.style.cursor = 'pointer';
+        circle.addEventListener('click', () => {
+          const id = circle.querySelector('.cycle-badge').textContent.trim();
+          openEcoModal(id);
+        });
+      });
+
+      // Bind clicks on Mobile cards
+      document.querySelectorAll('.cycle-mobile-card').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+          const id = card.querySelector('.cm-badge').textContent.trim();
+          openEcoModal(id);
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
