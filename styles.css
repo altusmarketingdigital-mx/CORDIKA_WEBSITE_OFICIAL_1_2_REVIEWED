@@ -2795,3 +2795,71 @@
 .cycle-arrow-label {
   /* Si se desea ocultar también los textos de las flechas, descomentar. Por ahora se dejan para entender el flujo. */
 }
+
+
+/* ==========================================================================
+   MEJORAS DE RESPONSIVIDAD DEL DIAGRAMA
+   ========================================================================== */
+/* Forzar visualización del radial hasta los 768px usando escalas */
+@media (max-width: 1200px) {
+  .cycle-radial-wrapper {
+    display: block !important;
+    transform: scale(0.9) !important;
+    margin: -50px auto !important; /* Ajuste para el espacio extra del scale */
+  }
+  .cycle-mobile-wrapper {
+    display: none !important;
+  }
+}
+@media (max-width: 1050px) {
+  .cycle-radial-wrapper {
+    display: block !important;
+    transform: scale(0.8) !important;
+    margin: -100px auto !important;
+  }
+  .cycle-mobile-wrapper {
+    display: none !important;
+  }
+}
+@media (max-width: 900px) {
+  .cycle-radial-wrapper {
+    display: block !important;
+    transform: scale(0.65) !important;
+    margin: -150px auto !important;
+  }
+  .cycle-mobile-wrapper {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  /* En celulares o tablets pequeñas, ocultamos el radial y mostramos tarjetas */
+  .cycle-radial-wrapper {
+    display: none !important;
+  }
+  .cycle-mobile-wrapper {
+    display: flex !important;
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 500px) {
+  .cycle-mobile-wrapper {
+    padding: 0 10px;
+  }
+  .cycle-mobile-card {
+    padding: 15px;
+  }
+  .cm-header h4 {
+    font-size: 12px;
+  }
+}
+
+/* Además, ajustar el overflow para evitar scrolls horizontales en el body */
+body, html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+.cycle-diagram-section {
+  width: 100%;
+  overflow: hidden;
+}
