@@ -2863,3 +2863,10 @@ body, html {
   width: 100%;
   overflow: hidden;
 }
+\n
+/* FORZAR MAYÚSCULAS EN EL MENÚ PRINCIPAL Y ENLACES DE NAVEGACIÓN */
+.main-nav a,
+.mobile-nav a,
+.utility-bar a {
+  text-transform: uppercase !important;
+}
