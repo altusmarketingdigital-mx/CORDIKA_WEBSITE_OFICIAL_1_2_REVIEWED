@@ -1632,7 +1632,7 @@
       });
 
       // Bind clicks on Desktop circles
-      document.querySelectorAll('.cycle-node-circle').forEach(circle => {
+      document.querySelectorAll('.cycle-node').forEach(circle => {
         circle.style.cursor = 'pointer';
         circle.addEventListener('click', () => {
           const id = circle.querySelector('.cycle-badge').textContent.trim();
