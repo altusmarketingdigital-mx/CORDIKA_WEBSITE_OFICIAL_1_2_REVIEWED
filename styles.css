@@ -2889,3 +2889,8 @@ body, html {
   letter-spacing: 0.5px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
+
+.cycle-node-title.cycle-title-top {
+  top: auto;
+  bottom: 160px; /* Pushes the text above the 150px circle */
+}
