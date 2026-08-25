@@ -2990,3 +2990,17 @@ body, html {
 .utility-bar a {
   text-transform: uppercase !important;
 }
+
+
+/* ==========================================================================
+   FIX SUBMENU VISIBILITY (Remove margin deadzone and boost z-index)
+   ========================================================================== */
+.dropdown-content {
+  margin-top: 0 !important;
+  top: 100% !important;
+  z-index: 9999 !important;
+  display: none !important; /* Ensure it stays hidden when not hovered */
+}
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
