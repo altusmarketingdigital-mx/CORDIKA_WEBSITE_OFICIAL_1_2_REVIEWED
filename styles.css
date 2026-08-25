@@ -2912,3 +2912,69 @@ body, html {
   text-align: left;
   width: 180px;
 }
+
+
+/* ==========================================================================
+   DIAGRAM AESTHETIC UPGRADE (LUXURY / GLASSMORPHISM)
+   ========================================================================== */
+
+/* Central Hub Styling */
+.cycle-center {
+  background: radial-gradient(circle at center, rgba(10,25,40,0.95) 0%, rgba(4,8,13,0.95) 100%) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 0 60px rgba(200, 160, 98, 0.15), inset 0 0 30px rgba(200, 160, 98, 0.1) !important;
+  border: 1px solid rgba(226, 183, 99, 0.4) !important;
+}
+
+.cycle-center-logo {
+  filter: drop-shadow(0 4px 15px rgba(0,0,0,0.6)) !important;
+}
+
+/* Node Container Styling (The 150px Circles) */
+.cycle-icon-box {
+  background: linear-gradient(145deg, #0a1420, #03060a) !important;
+  border: 1px solid rgba(226, 183, 99, 0.25) !important;
+  box-shadow: 
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    inset 0 -4px 15px rgba(0,0,0,0.8),
+    0 15px 35px rgba(0,0,0,0.6) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.cycle-icon-box:hover {
+  border-color: rgba(226, 183, 99, 0.9) !important;
+  box-shadow: 
+    inset 0 1px 0 rgba(255,255,255,0.15),
+    0 20px 45px rgba(200, 160, 98, 0.25) !important;
+  transform: scale(1.08) translateY(-5px) !important;
+}
+
+/* Node Icons Shadow */
+.cycle-icon-inner svg {
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.9)) !important;
+  transition: all 0.3s ease !important;
+}
+
+.cycle-icon-box:hover .cycle-icon-inner svg {
+  transform: scale(1.15) !important;
+  filter: drop-shadow(0 6px 12px rgba(200, 160, 98, 0.5)) !important;
+}
+
+/* Metallic Badges (Numbers) */
+.cycle-badge {
+  background: linear-gradient(135deg, #f5d78d 0%, #a36f17 100%) !important;
+  border: 2px solid #04080d !important;
+  color: #000 !important;
+  font-weight: 900 !important;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.8), inset 0 2px 3px rgba(255,255,255,0.5), inset 0 -2px 3px rgba(0,0,0,0.3) !important;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.3) !important;
+}
+
+/* Typography Enhancement for Node Titles */
+.cycle-node-title {
+  color: #f4f7f8 !important;
+  letter-spacing: 1.5px !important;
+  text-shadow: 0 4px 15px rgba(0,0,0,1), 0 2px 5px rgba(0,0,0,0.8) !important;
+  font-family: 'Manrope', sans-serif !important;
+  opacity: 0.9 !important;
+}
