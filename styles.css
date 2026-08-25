@@ -2546,7 +2546,7 @@
   flex-direction: column;
   align-items: center;
 }
-.cycle-node-circle {
+.cycle-icon-box {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -2581,7 +2581,7 @@
   font-size: 32px;
   margin-bottom: 8px;
 }
-.cycle-node-circle h4 {
+.cycle-icon-box h4 {
   color: #fff;
   font-size: 10px;
   font-weight: 700;
@@ -2770,7 +2770,7 @@
   font-size: 20px;
   top: -2px;
 }
-.cycle-node-circle:hover {
+.cycle-icon-box:hover {
   transform: scale(1.05);
   box-shadow: 0 15px 30px rgba(212,175,55,0.3);
   border-color: #fff;
