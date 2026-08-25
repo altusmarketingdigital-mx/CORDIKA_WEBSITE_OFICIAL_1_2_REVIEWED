@@ -2894,3 +2894,21 @@ body, html {
   top: auto;
   bottom: 160px; /* Pushes the text above the 150px circle */
 }
+
+.cycle-node-title.cycle-title-left {
+  top: 50%;
+  left: auto;
+  right: 160px; /* 10px from the left edge of the 150px circle */
+  transform: translateY(-50%);
+  text-align: right;
+  width: 180px;
+}
+
+.cycle-node-title.cycle-title-right {
+  top: 50%;
+  left: 160px; /* 10px from the right edge of the 150px circle */
+  right: auto;
+  transform: translateY(-50%);
+  text-align: left;
+  width: 180px;
+}
