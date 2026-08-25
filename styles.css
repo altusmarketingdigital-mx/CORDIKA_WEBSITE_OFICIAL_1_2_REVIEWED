@@ -2978,3 +2978,15 @@ body, html {
   font-family: 'Manrope', sans-serif !important;
   opacity: 0.9 !important;
 }
+
+
+/* ==========================================================================
+   FORCE UPPERCASE ON ALL NAVIGATION ITEMS
+   ========================================================================== */
+.main-nav a,
+.main-nav .dropbtn,
+.dropdown-content a,
+.mobile-nav a,
+.utility-bar a {
+  text-transform: uppercase !important;
+}
