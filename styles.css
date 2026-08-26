@@ -666,12 +666,12 @@
   letter-spacing: -3px !important;
   margin: 0 0 30px 0 !important;
   line-height: 1 !important;
-  text-align: left !important;
+  text-align: center !important;
 }
 .about-text-wrapper {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 5%;
+  justify-content: center;
+  padding-right: 0;
 }
 .about-text-wrapper p {
   font-family: 'Inter', sans-serif !important;
@@ -686,7 +686,7 @@
 @media (max-width: 991px) {
   .about-text-wrapper { justify-content: center; padding-right: 0; }
   .about-title-sans { letter-spacing: -1px !important; }
-  .about-text-wrapper p { font-size: 16px !important; text-align: left !important; }
+  .about-text-wrapper p { font-size: 16px !important; text-align: center !important; }
 }
 
 
@@ -702,12 +702,14 @@
 .about-hero-left {
   flex: 1;
   position: relative;
+  text-align: center;
 }
 .about-hero-left::before {
   content: '';
   position: absolute;
   top: -40px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 4px;
   background: var(--gold2);
