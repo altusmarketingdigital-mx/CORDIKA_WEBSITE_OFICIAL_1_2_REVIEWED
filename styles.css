@@ -3028,3 +3028,62 @@ body, html {
 .dropdown:hover .dropdown-content {
   display: block !important;
 }
+
+/* --- INVERSION MAIN GRID --- */
+.inv-main-section {
+  background: var(--bg-color, #040914);
+}
+.inv-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.inv-main-card {
+  background: #0e131d;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.inv-main-card:hover {
+  transform: translateY(-5px);
+  background: #141b27;
+  border-color: rgba(212, 175, 55, 0.3);
+}
+.inv-main-icon {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inv-main-card h3 {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.inv-main-card p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .inv-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .inv-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
