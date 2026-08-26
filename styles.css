@@ -893,17 +893,13 @@
 
 
 /* --- METOLOGIA PROCESS --- */
-.metologia-process-wrapper {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 15px;
-  overflow-x: auto;
+.metodologia-process-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   padding-bottom: 20px;
 }
-.metologia-card {
-  flex: 1 1 0;
-  min-width: 140px;
+.metodologia-card {
   background: rgba(6, 21, 34, 0.8);
   border: 1px solid rgba(226, 183, 99, 0.2);
   border-radius: 8px;
@@ -914,7 +910,7 @@
   flex-direction: column;
 }
 /* The arrow between cards */
-.metologia-card:not(:last-child)::after {
+.metodologia-card::after {
   content: '›';
   position: absolute;
   right: -15px;
@@ -924,7 +920,33 @@
   color: var(--gold2);
   z-index: 10;
 }
-.metologia-badge {
+
+/* Hide arrow on the last card always */
+.metodologia-card:last-child::after { content: none; }
+
+/* Grid arrow handling for wrapping */
+.metodologia-card:nth-child(4n)::after { content: none; }
+
+@media (max-width: 1200px) {
+  .metodologia-process-wrapper { grid-template-columns: repeat(3, 1fr); }
+  .metodologia-card:nth-child(4n)::after { content: '›'; } /* reset */
+  .metodologia-card:nth-child(3n)::after { content: none; }
+  .metodologia-card:last-child::after { content: none; }
+}
+
+@media (max-width: 991px) {
+  .metodologia-process-wrapper { grid-template-columns: repeat(2, 1fr); }
+  .metodologia-card:nth-child(3n)::after { content: '›'; } /* reset */
+  .metodologia-card:nth-child(2n)::after { content: none; }
+  .metodologia-card:last-child::after { content: none; }
+}
+
+@media (max-width: 576px) {
+  .metodologia-process-wrapper { grid-template-columns: 1fr; }
+  .metodologia-card::after { content: none !important; }
+}
+
+.metodologia-badge {
   position: absolute;
   top: 0;
   left: 0;
@@ -938,12 +960,12 @@
   border-right: 1px solid rgba(226, 183, 99, 0.3);
   border-bottom: 1px solid rgba(226, 183, 99, 0.3);
 }
-.metologia-icon {
+.metodologia-icon {
   font-size: 38px;
   margin-bottom: 15px;
   color: var(--gold2);
 }
-.metologia-card h3 {
+.metodologia-card h3 {
   font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 800;
@@ -951,7 +973,7 @@
   margin-bottom: 10px;
   line-height: 1.2;
 }
-.metologia-card p {
+.metodologia-card p {
   font-size: 11px;
   line-height: 1.5;
   color: #cbd7de;
@@ -960,15 +982,15 @@
 }
 
 @media (max-width: 1200px) {
-  .metologia-card:not(:last-child)::after { display: none; }
-  .metologia-process-wrapper { flex-wrap: wrap; justify-content: center; }
-  .metologia-card { flex: 0 0 calc(25% - 15px); min-width: 200px; }
+  .metodologia-card:not(:last-child)::after { display: none; }
+  
+  .metodologia-card { flex: 0 0 calc(25% - 15px); min-width: 200px; }
 }
 @media (max-width: 768px) {
-  .metologia-card { flex: 0 0 calc(50% - 15px); }
+  .metodologia-card { flex: 0 0 calc(50% - 15px); }
 }
 @media (max-width: 480px) {
-  .metologia-card { flex: 0 0 100%; }
+  .metodologia-card { flex: 0 0 100%; }
 }
 
 
