@@ -124,10 +124,18 @@
   });
 
   // Leer hash de la URL al cargar o mostrar inicio por defecto
-  const hash = window.location.hash.replace('#', '');
-  if (hash) {
-    setTimeout(() => showBlock(hash || 'inicio'), 50);
-  }
+  const initHash = window.location.hash.replace('#', '');
+  showBlock(initHash || 'inicio');
+
+  window.addEventListener('hashchange', () => {
+    const currentHash = window.location.hash.replace('#', '');
+    showBlock(currentHash || 'inicio');
+  });
+
+  window.addEventListener('popstate', () => {
+    const currentHash = window.location.hash.replace('#', '');
+    showBlock(currentHash || 'inicio');
+  });
 })();
 
 // Interactive intellectual assets: Gerencia Integral, Architecture of Decisions and Ecosystem
