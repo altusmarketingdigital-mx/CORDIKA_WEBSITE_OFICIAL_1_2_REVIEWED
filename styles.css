@@ -894,12 +894,14 @@
 
 /* --- METOLOGIA PROCESS --- */
 .metodologia-process-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding-bottom: 20px;
 }
 .metodologia-card {
+  width: calc(25% - 15px);
   background: rgba(6, 21, 34, 0.8);
   border: 1px solid rgba(226, 183, 99, 0.2);
   border-radius: 8px;
@@ -928,21 +930,21 @@
 .metodologia-card:nth-child(4n)::after { content: none; }
 
 @media (max-width: 1200px) {
-  .metodologia-process-wrapper { grid-template-columns: repeat(3, 1fr); }
+  .metodologia-card { width: calc(33.333% - 14px); }
   .metodologia-card:nth-child(4n)::after { content: '›'; } /* reset */
   .metodologia-card:nth-child(3n)::after { content: none; }
   .metodologia-card:last-child::after { content: none; }
 }
 
 @media (max-width: 991px) {
-  .metodologia-process-wrapper { grid-template-columns: repeat(2, 1fr); }
+  .metodologia-card { width: calc(50% - 10px); }
   .metodologia-card:nth-child(3n)::after { content: '›'; } /* reset */
   .metodologia-card:nth-child(2n)::after { content: none; }
   .metodologia-card:last-child::after { content: none; }
 }
 
 @media (max-width: 576px) {
-  .metodologia-process-wrapper { grid-template-columns: 1fr; }
+  .metodologia-card { width: 100%; }
   .metodologia-card::after { content: none !important; }
 }
 
