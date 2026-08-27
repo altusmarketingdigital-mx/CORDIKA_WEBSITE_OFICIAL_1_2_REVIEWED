@@ -514,15 +514,17 @@
 }
 
 .sectors-grid-10 {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 .sector-card-10 {
+  width: calc(25% - 15px);
   background: rgba(6, 21, 34, 0.9);
   border: 1px solid rgba(226, 183, 99, 0.15);
   border-radius: 8px;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   position: relative;
   transition: all 0.3s ease;
@@ -546,9 +548,9 @@
 }
 .sector-icon {
   font-size: 36px;
-  margin: 10px auto;
-  width: 60px;
-  height: 60px;
+  margin: 10px auto 20px auto;
+  width: 70px;
+  height: 70px;
   border: 2px solid #000;
   border-radius: 50%;
   display: flex;
@@ -557,9 +559,9 @@
   background: #020b12;
 }
 .sector-card-10 h3 {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 15px;
-  height: 34px;
+  min-height: 48px;
 }
 .sector-img {
   width: 100%;
@@ -570,22 +572,22 @@
   margin-bottom: 15px;
 }
 .sector-card-10 p {
-  font-size: 11px;
+  font-size: 13px;
   color: #cbd7de;
   line-height: 1.4;
 }
 
 @media (max-width: 1200px) {
-  .sectors-grid-10 { grid-template-columns: repeat(3, 1fr); }
+  .sector-card-10 { width: calc(33.333% - 14px); }
   .values-banner { grid-template-columns: repeat(2, 1fr); }
   .value-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
 }
 @media (max-width: 768px) {
-  .sectors-grid-10 { grid-template-columns: repeat(2, 1fr); }
+  .sector-card-10 { width: calc(50% - 10px); }
   .values-banner { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
-  .sectors-grid-10 { grid-template-columns: 1fr; }
+  .sector-card-10 { width: 100%; }
 }
 
 
